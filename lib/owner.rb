@@ -49,23 +49,23 @@ class Owner
   end
 
   def walk_dogs
-    Dog.all.map do |dog|
+    dogs.map do |dog|
       dog.mood = "happy"
     end
   end
 
   def feed_cats
-    Cat.all.map do |cat|
+    cats.map do |cat|
       cat.mood = "happy"
     end
   end
 
   def sell_pets
-    Cat.all.map do |cat|
+    cats.map do |cat|
       cat.mood = "nervous"
       cat.owner = nil
     end
-    Dog.all.map do |dog|
+    dogs.map do |dog|
       dog.mood = "nervous"
       dog.owner = nil
     end
